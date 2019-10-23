@@ -1,12 +1,14 @@
 @import './vars/vars';
 
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    
+    font-family: 'Roboto', sans-serif;
 }
 
 @import './navbar/navbar'
