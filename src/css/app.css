@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0; }
+
+.navbar {
+  height: 64px;
+  width: 100vw;
+  background: #db3d44;
+  padding: 1rem 5rem; }
+
+/*# sourceMappingURL=app.css.map */
