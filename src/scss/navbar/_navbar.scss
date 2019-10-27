@@ -17,7 +17,7 @@
         align-items: center;
         
         .navbar-logo {
-            font-family: 'Luckiest Guy', cursive;
+            font-family: 'Lobster', cursive;
         }
 
         .navbar-menu {
@@ -48,4 +48,8 @@
             }
         }
     }
+}
+
+.active {
+    background: darken($color: $accent-color, $amount: 15);
 }

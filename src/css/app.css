@@ -1,12 +1,19 @@
 /* Colors */
 /* transition-durations */
-@import url("https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lobster&display=swap");
 * {
   box-sizing: border-box; }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: white;
+  background: #262626; }
+
+a {
+  color: #0D76DD; }
+  a:visited {
+    color: #094f95; }
 
 .navbar {
   height: 50px;
@@ -21,7 +28,7 @@ body {
     justify-content: space-between;
     align-items: center; }
     .navbar .navbar-wrapper .navbar-logo {
-      font-family: 'Luckiest Guy', cursive; }
+      font-family: 'Lobster', cursive; }
     .navbar .navbar-wrapper .navbar-menu {
       display: flex;
       align-items: center;
@@ -39,5 +46,67 @@ body {
         transition-duration: 250ms; }
         .navbar .navbar-wrapper .navbar-menu .navbar-menu-item:hover {
           background: #ac2026; }
+
+.active {
+  background: #ac2026; }
+
+.wrapper {
+  text-align: center; }
+  .wrapper hr {
+    width: 60%;
+    margin: 0 auto; }
+
+.jumbotron {
+  background: #222222;
+  padding: 2rem;
+  margin: 6rem auto; }
+
+.jumbotron-flags {
+  margin: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin-bottom: 0.67em;
+  width: 30%; }
+
+.flag-icon {
+  width: 50px;
+  height: auto;
+  margin-bottom: 1rem; }
+
+.demo-box {
+  background: #222222;
+  width: 60%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center; }
+  .demo-box .input-group {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center; }
+    .demo-box .input-group * {
+      height: 30px;
+      padding: 0.5rem; }
+    .demo-box .input-group .input-group-prepend {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: black;
+      background: #D3D3D3;
+      border-radius: 10px 0 0 10px; }
+    .demo-box .input-group input {
+      border: none; }
+    .demo-box .input-group button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: none;
+      border-radius: 0 10px 10px 0;
+      background: #45db3d;
+      transition-duration: 250ms; }
+      .demo-box .input-group button:hover {
+        background: #27ac20; }
 
 /*# sourceMappingURL=app.css.map */

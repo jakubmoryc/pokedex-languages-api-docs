@@ -18,7 +18,7 @@ import Docs from './components/Docs/Docs';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Navbar/>
         <Switch>
           <Route path="/docs">

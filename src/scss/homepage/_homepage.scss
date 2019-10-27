@@ -1,0 +1,89 @@
+.wrapper {
+    text-align: center;
+
+    hr {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+.jumbotron {
+    background: $base-color;
+
+    padding: 2rem;
+    margin: 6rem auto;
+}
+
+.jumbotron-flags {
+    margin: auto;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-bottom: 0.67em;
+
+    width: 30%;
+}
+
+.flag-icon {
+    width: 50px;
+    height: auto;
+
+    margin-bottom: 1rem;
+}
+
+.demo-box {
+    background: $base-color;
+
+    width: 60%;
+    margin: auto;
+
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+
+    .input-group {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        * {
+            height: 30px;
+            padding: 0.5rem;
+        }
+
+        .input-group-prepend{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: black;
+            background: #D3D3D3;
+
+            border-radius: 10px 0 0 10px;
+        }
+
+        input {
+            border: none;
+        }
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            cursor: pointer;
+
+            border: none;
+            border-radius: 0 10px 10px 0;
+            background: $accent-compl-color;
+
+            transition-duration: $button-hover-duration;
+
+            &:hover {
+                background: darken($color: $accent-compl-color, $amount: 15);
+            }
+        }
+    }
+}
