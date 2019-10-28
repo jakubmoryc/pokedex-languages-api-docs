@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }  from 'react';
 
 import './css/app.css';
 
@@ -16,10 +16,15 @@ import About from './components/About/About';
 import Docs from './components/Docs/Docs';
 
 function App() {
+  const [activePage, setActivePage] = useState("homepage");
+
   return (
     <Router>
       <div className="app">
-        <Navbar/>
+        <Navbar 
+          setActivePage={setActivePage}
+          activePage={activePage}
+        />
         <Switch>
           <Route path="/docs">
             <Docs/>

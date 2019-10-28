@@ -5,6 +5,7 @@
   box-sizing: border-box; }
 
 body {
+  overflow: overlay;
   margin: 0;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   color: white;
@@ -15,9 +16,27 @@ a {
   a:visited {
     color: #094f95; }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 20px;
+  transition-duration: 1000ms; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #bfbfbf; }
+
 .navbar {
   height: 50px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
   background: #db3d44;
@@ -52,7 +71,7 @@ a {
 
 .wrapper {
   text-align: center; }
-  .wrapper hr {
+  .wrapper > hr {
     width: 60%;
     margin: 0 auto; }
 
@@ -78,35 +97,45 @@ a {
   background: #222222;
   width: 60%;
   margin: auto;
-  padding: 2rem;
+  padding: 3rem;
   display: flex;
-  justify-content: center; }
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+  .demo-box > hr {
+    width: 70%;
+    margin: 0 auto; }
   .demo-box .input-group {
     display: flex;
     flex-flow: row nowrap;
     align-items: center; }
-    .demo-box .input-group * {
+    .demo-box .input-group > * {
       height: 30px;
-      padding: 0.5rem; }
+      padding: 1.25rem; }
     .demo-box .input-group .input-group-prepend {
       display: flex;
       justify-content: center;
       align-items: center;
       color: black;
       background: #D3D3D3;
-      border-radius: 10px 0 0 10px; }
+      border-radius: 20px 0 0 20px; }
     .demo-box .input-group input {
       border: none; }
     .demo-box .input-group button {
       display: flex;
+      flex-flow: column nowrap;
       justify-content: center;
       align-items: center;
       cursor: pointer;
       border: none;
-      border-radius: 0 10px 10px 0;
+      border-radius: 0 20px 20px 0;
       background: #45db3d;
       transition-duration: 250ms; }
+      .demo-box .input-group button p {
+        margin: 0; }
       .demo-box .input-group button:hover {
         background: #27ac20; }
+  .demo-box .demo-box-response {
+    width: 70%; }
 
 /*# sourceMappingURL=app.css.map */

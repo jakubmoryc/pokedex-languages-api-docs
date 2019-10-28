@@ -4,7 +4,7 @@ import {
     Link
   } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ setActivePage, activePage }) {
     return (
         <nav className="navbar">
             <div className="navbar-wrapper">
@@ -12,13 +12,31 @@ export default function Navbar() {
                     <h1>PokéLANG</h1>
                 </div>
                 <div className="navbar-menu">
-                    <Link className="navbar-menu-item" to="/">
+                    <Link 
+                        className={"navbar-menu-item" + (activePage === 'homepage' ? ' active' : '')}
+                        to="/"
+                        onClick={(e) => {
+                            setActivePage("homepage")
+                        }} 
+                    >
                         Home
                     </Link>
-                    <Link className="navbar-menu-item" to="/about">
+                    <Link 
+                        className={"navbar-menu-item" + (activePage === 'about' ? ' active' : '')} 
+                        to="/about"
+                        onClick={(e) => {
+                            setActivePage("about")
+                        }}
+                    >
                         About
                     </Link>
-                    <Link className="navbar-menu-item" to="/docs">
+                    <Link 
+                        className={"navbar-menu-item" + (activePage === 'docs' ? ' active' : '')}
+                        to="/docs"
+                        onClick={(e) => {
+                            setActivePage("docs")
+                        }}
+                    >
                         Docs
                     </Link>
                 </div>

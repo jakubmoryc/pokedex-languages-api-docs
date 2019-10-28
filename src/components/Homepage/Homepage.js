@@ -39,10 +39,24 @@ export default class Homepage extends Component {
                         <div class="input-group-prepend">
                             https://pokedex-languages-api.herokuapp.com/
                         </div>
-                        <input type="text"/>
+                        <input type="text" placeholder="pokemon/resource"/>
                         <button class="input-group-button">
-                            Submit
+                            <p>Submit</p>
                         </button>
+                        <br/>
+                    </div>
+                    <p>Try: /pokemon, /roserade, /420, /roserade/es/</p>
+                    <h2>Response</h2>
+                    <hr/>
+                    <div className="demo-box-response">
+                        <code>
+                        Gfullam has a posted a great answer.
+
+I'll expand it a bit and provide some alternative solutions. Most of these are probably overkill for your particular case. However I believe you (and potential future readers) might find these useful. Note that these require ES6.
+
+Template Literal Expression
+Since you already have your code stored in a variable, you could use a Template Literal Expression. This is might be preferable if you have many variables or if you want to control your output.
+                        </code>
                     </div>
                 </div>
             </div>

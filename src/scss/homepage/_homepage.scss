@@ -1,7 +1,7 @@
 .wrapper {
     text-align: center;
 
-    hr {
+    > hr {
         width: 60%;
         margin: 0 auto;
     }
@@ -38,19 +38,26 @@
     width: 60%;
     margin: auto;
 
-    padding: 2rem;
+    padding: 3rem;
 
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
+    align-items: center;
+
+    > hr {
+        width: 70%;
+        margin: 0 auto;
+    }
 
     .input-group {
         display: flex;
         flex-flow: row nowrap;
         align-items: center;
 
-        * {
+        > * {
             height: 30px;
-            padding: 0.5rem;
+            padding: 1.25rem;
         }
 
         .input-group-prepend{
@@ -61,7 +68,7 @@
             color: black;
             background: #D3D3D3;
 
-            border-radius: 10px 0 0 10px;
+            border-radius: 20px 0 0 20px;
         }
 
         input {
@@ -70,20 +77,29 @@
 
         button {
             display: flex;
+            flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
 
             cursor: pointer;
 
             border: none;
-            border-radius: 0 10px 10px 0;
+            border-radius: 0 20px 20px 0;
             background: $accent-compl-color;
 
             transition-duration: $button-hover-duration;
+
+            p {
+                margin: 0;
+            }
 
             &:hover {
                 background: darken($color: $accent-compl-color, $amount: 15);
             }
         }
+    }
+
+    .demo-box-response {
+        width: 70%;
     }
 }
