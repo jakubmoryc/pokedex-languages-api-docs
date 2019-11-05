@@ -14,6 +14,45 @@ import {
   } from "react-router-dom";
 
 export default class Homepage extends Component {
+    state = {
+        result: "No results yet",
+        inputValue: ""
+    }
+
+    fetchResults = () => {
+        const link = "https://pokedex-languages-api.herokuapp.com/" + this.state.inputValue
+        console.log(link)
+        fetch(link)
+            .then(res => {
+                if(res.status !== 200) {
+                    this.setState({
+                        result: "Error: " + res.status.toString()
+                    })
+                } else {
+                    res.json()
+                        .then(data => {
+                            this.setState({
+                                result: JSON.stringify(data, null, 2)
+                            })
+                        })
+                }
+            })
+            .catch((err) => {
+                console.log('Fetch Error : ', err);
+            })
+    }
+
+    handleInput = (e) => {
+        this.setState({
+            inputValue: e.target.value
+        })
+    }
+
+    handleSubmit = (e) => {
+        this.fetchResults()
+    }
+
+
     render() {
         return (
             <div className="wrapper">
@@ -37,26 +76,37 @@ export default class Homepage extends Component {
                 <div className="demo-box">
                     <div className="input-group">
                         <div class="input-group-prepend">
-                            https://pokedex-languages-api.herokuapp.com/
+                            <a 
+                                href="https://pokedex-languages-api.herokuapp.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                https://pokedex-languages-api.herokuapp.com/ 
+                            </a>
                         </div>
-                        <input type="text" placeholder="pokemon/resource"/>
-                        <button class="input-group-button">
+                        <input
+                            type="text" 
+                            placeholder="pokemon/resource"
+                            value={this.state.input}
+                            onChange={this.handleInput}
+                        />
+                        <button 
+                            class="input-group-button"
+                            onClick={this.handleSubmit}
+                        >
                             <p>Submit</p>
                         </button>
                         <br/>
                     </div>
-                    <p>Try: /pokemon, /roserade, /420, /roserade/es/</p>
+                    <p>Try: /pokemon, /roserade, /420, /roserade/es</p>
                     <h2>Response</h2>
                     <hr/>
-                    <div className="demo-box-response">
-                        <code>
-                        Gfullam has a posted a great answer.
-
-I'll expand it a bit and provide some alternative solutions. Most of these are probably overkill for your particular case. However I believe you (and potential future readers) might find these useful. Note that these require ES6.
-
-Template Literal Expression
-Since you already have your code stored in a variable, you could use a Template Literal Expression. This is might be preferable if you have many variables or if you want to control your output.
-                        </code>
+                    <div className="demo-box-result">
+                        <pre>
+                            <code class="language-json">
+                                {this.state.result}
+                            </code>
+                        </pre>
                     </div>
                 </div>
             </div>

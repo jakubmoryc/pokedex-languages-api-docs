@@ -24,8 +24,11 @@ a {
     }
 }
 
+.app {
+    padding-top: 50px;
+}
+
 @import './code/code';
-@import './scrollbar/scrollbar';
 
 @import './navbar/navbar';
 @import './homepage/homepage'

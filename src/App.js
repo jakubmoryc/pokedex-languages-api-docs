@@ -20,11 +20,11 @@ function App() {
 
   return (
     <Router>
-      <div className="app">
-        <Navbar 
+      <Navbar 
           setActivePage={setActivePage}
           activePage={activePage}
         />
+      <div className="app">
         <Switch>
           <Route path="/docs">
             <Docs/>

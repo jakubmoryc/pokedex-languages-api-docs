@@ -38,7 +38,7 @@
     width: 60%;
     margin: auto;
 
-    padding: 3rem;
+    padding: 4rem;
 
     display: flex;
     flex-flow: column nowrap;
@@ -46,7 +46,7 @@
     align-items: center;
 
     > hr {
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -99,7 +99,7 @@
         }
     }
 
-    .demo-box-response {
+    .demo-box-result {
         width: 70%;
     }
 }
