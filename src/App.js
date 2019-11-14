@@ -14,6 +14,7 @@ import {
 import Homepage from './components/Homepage/Homepage';
 import About from './components/About/About';
 import Docs from './components/Docs/Docs';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [activePage, setActivePage] = useState("homepage");
@@ -39,6 +40,7 @@ function App() {
             <Redirect push to="/"/>
           </Route>
         </Switch>
+        <Footer/>
       </div>
     </Router>
   );

@@ -1,0 +1,19 @@
+footer {
+    width: 100%;
+    height: 50px;
+    background: $footer-color;
+
+    padding-right: 2rem;
+    
+    font-size: 0.9rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    > p {
+        > a {
+            color: white!important;
+        }
+    }
+}

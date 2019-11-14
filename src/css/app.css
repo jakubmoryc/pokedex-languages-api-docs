@@ -12,9 +12,10 @@ body {
   background: #262626; }
 
 a {
-  color: #0D76DD; }
-  a:visited {
-    color: #094f95; }
+  color: #0D76DD;
+  transition-duration: 250ms; }
+  a:hover {
+    color: #439cf4; }
 
 .app {
   padding-top: 50px; }
@@ -44,7 +45,6 @@ pre {
   padding: 1em;
   margin: .5em 0;
   overflow: auto;
-  border-radius: 0.3em;
   text-align: left; }
 
 code[class*="language-"],
@@ -72,8 +72,7 @@ pre[class*="language-"] {
 pre[class*="language-"] {
   padding: 1em;
   margin: .5em 0;
-  overflow: auto;
-  border-radius: 0.3em; }
+  overflow: auto; }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
@@ -192,26 +191,30 @@ pre[class*="language-"] {
 
 .jumbotron {
   background: #222222;
-  padding: 2rem;
+  padding: 4rem;
+  padding-bottom: 4.5rem;
   margin: 6rem auto; }
+  .jumbotron > h1 {
+    margin-top: 0;
+    padding: 0px;
+    margin: 0px; }
 
 .jumbotron-flags {
   margin: auto;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
-  margin-bottom: 0.67em;
   width: 30%; }
 
 .flag-icon {
   width: 50px;
-  height: auto;
-  margin-bottom: 1rem; }
+  height: auto; }
 
 .demo-box {
   background: #222222;
   width: 60%;
   margin: auto;
+  margin-bottom: 6rem;
   padding: 4rem;
   display: flex;
   flex-flow: column nowrap;
@@ -232,8 +235,7 @@ pre[class*="language-"] {
       justify-content: center;
       align-items: center;
       color: black;
-      background: #D3D3D3;
-      border-radius: 20px 0 0 20px; }
+      background: #D3D3D3; }
     .demo-box .input-group input {
       border: none; }
     .demo-box .input-group button {
@@ -243,14 +245,30 @@ pre[class*="language-"] {
       align-items: center;
       cursor: pointer;
       border: none;
-      border-radius: 0 20px 20px 0;
       background: #45db3d;
       transition-duration: 250ms; }
-      .demo-box .input-group button p {
-        margin: 0; }
+      .demo-box .input-group button > img {
+        height: 30px;
+        width: auto;
+        filter: invert(100%); }
       .demo-box .input-group button:hover {
         background: #27ac20; }
   .demo-box .demo-box-result {
-    width: 70%; }
+    width: 100%; }
+    .demo-box .demo-box-result pre {
+      min-height: 50vh;
+      max-height: 50vh; }
+
+footer {
+  width: 100%;
+  height: 50px;
+  background: #0f0f0f;
+  padding-right: 2rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; }
+  footer > p > a {
+    color: white !important; }
 
 /*# sourceMappingURL=app.css.map */

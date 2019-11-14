@@ -9,6 +9,8 @@ import kr from '../../icons/south-korea.svg'
 import cn from '../../icons/china.svg'
 import fr from '../../icons/france.svg'
 
+import signIn from '../../icons/sign-in.svg'
+
 import {
     Link
   } from "react-router-dom";
@@ -21,13 +23,15 @@ export default class Homepage extends Component {
 
     fetchResults = () => {
         const link = "https://pokedex-languages-api.herokuapp.com/" + this.state.inputValue
-        console.log(link)
         fetch(link)
             .then(res => {
                 if(res.status !== 200) {
-                    this.setState({
-                        result: "Error: " + res.status.toString()
-                    })
+                    res.json()
+                        .then(data => {
+                            this.setState({
+                                result: "Error: " + res.status.toString() + " - " + JSON.stringify(data.msg)
+                            })
+                        })
                 } else {
                     res.json()
                         .then(data => {
@@ -38,7 +42,9 @@ export default class Homepage extends Component {
                 }
             })
             .catch((err) => {
-                console.log('Fetch Error : ', err);
+                this.setState({
+                    result: "Failed to fetch. Service may be unavailable (503 Status Code)"
+                })
             })
     }
 
@@ -51,6 +57,14 @@ export default class Homepage extends Component {
     handleSubmit = (e) => {
         this.fetchResults()
     }
+
+    handleLinkClick = url => e => {
+        e.preventDefault()
+        this.setState({
+            inputValue: url
+        })
+        this.handleSubmit()
+    };
 
 
     render() {
@@ -70,7 +84,6 @@ export default class Homepage extends Component {
                         <img src={fr} alt="" className="flag-icon"/>
                     </div>
                 </div>
-                <hr/>
                 <h1>Try it now!</h1>
                 <h3>And <Link to="/docs">check out the docs!</Link></h3>
                 <div className="demo-box">
@@ -87,20 +100,44 @@ export default class Homepage extends Component {
                         <input
                             type="text" 
                             placeholder="pokemon/resource"
-                            value={this.state.input}
+                            value={this.state.inputValue}
                             onChange={this.handleInput}
                         />
                         <button 
                             class="input-group-button"
                             onClick={this.handleSubmit}
                         >
-                            <p>Submit</p>
+                            <img src={signIn}></img>
                         </button>
                         <br/>
                     </div>
-                    <p>Try: /pokemon, /roserade, /420, /roserade/es</p>
+                    <p>Try:&nbsp; 
+                        <a 
+                            href="#"
+                            onClick={this.handleLinkClick("pokemon")}
+                        >
+                            /pokemon
+                        </a>,&nbsp;
+                        <a 
+                            href="#"
+                            onClick={this.handleLinkClick("pokemon/roserade")}
+                        >
+                            pokemon/roserade
+                        </a>,&nbsp; 
+                        <a 
+                            href="#"
+                            onClick={this.handleLinkClick("pokemon/420")}
+                        >
+                            pokemon/420
+                        </a>,&nbsp; 
+                        <a 
+                            href="#"
+                            onClick={this.handleLinkClick("pokemon/roserade/fr")}
+                        >
+                            pokemon/roserade/fr
+                        </a>
+                    </p>
                     <h2>Response</h2>
-                    <hr/>
                     <div className="demo-box-result">
                         <pre>
                             <code class="language-json">
