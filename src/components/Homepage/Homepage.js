@@ -69,7 +69,7 @@ export default class Homepage extends Component {
 
     render() {
         return (
-            <div className="wrapper">
+            <div className="homepage">
                 <div className="jumbotron">
                     <h1>PokéLANG API</h1>
                     <h2>A RESTful API with Pokémon' names in various languages</h2>

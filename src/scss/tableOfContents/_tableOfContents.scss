@@ -1,0 +1,37 @@
+.pageWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 3rem auto 0 auto;
+    width: 70%;
+
+    align-items: flex-start;
+}
+
+.tableOfContents-wrapper {
+
+    flex: 30%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tableOfContents {
+    padding: 5rem 2rem;
+
+    border-right: 2px solid white;
+    
+    li {
+        line-height: 200%;
+        font-size: 1.1rem;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 50px;
+}
+
+.content {
+    flex: 70%;
+    padding: 4rem 4rem;
+}
