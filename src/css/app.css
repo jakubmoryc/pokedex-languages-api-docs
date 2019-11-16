@@ -173,6 +173,10 @@ pre[class*="language-"] {
   flex: 70%;
   padding: 4rem 4rem; }
 
+.content img {
+  height: auto;
+  width: 100%; }
+
 .navbar {
   height: 50px;
   width: 100%;

@@ -20,25 +20,61 @@ export default function About({ stickyTableOfContents }) {
                     </div>
                 </div>
                 <div className="content">
-                    <h1>About</h1>
-                    <h2 id="about-q1">What is this?</h2>
-                    <p>This website provides a RESTful API interface to highly detailed objects built from thousands of lines of data related to Pokémon. We specifically cover the video game franchise. Using this website, you can consume information on Pokémon, their moves, abilities, types, egg groups and much, much more.</p>
-                    <h2 id="about-q2">What is an API?</h2>
-                    <p>An API (Application Programming Interface) is a contract that allow developers to interact with an application through a set of interfaces. In this case, the application is a database of thousands of Pokémon-related objects, and the interfaces are URL links.
-
-A RESTful API is an API that conforms to a set of loose conventions based on HTTP verbs, errors, and hyperlinks.</p>
-                    <h2 id="about-q3">How much information is stored here?</h2>
-                    <p>A lot.
-
-We currently have tens of thousands of individual items in our database, including:</p>
-                    <h2 id="about-q4">So who built this?</h2>
-                    <p>Pokémon V1 was created by Paul Hallett as a weekend project but it quickly became more than a weekend's worth of work. In December of 2014 Paul deprecated V1 in favor of working on V2.
-
-This is where Zane Adickes jumped in. Zane thought the original project was a fantastic idea and wanted to help it grow. With direction from Paul, Zane created the V2 API using an exact mirror of Veekun's data related to the main series of games.</p>
-                    <h2 id="about-q5">Where did you get all of this data?</h2>
-                    <p>Veekun has a fantastic Pokedex which is also an open source project containing a ton of csv data. We used this to flesh out the database that powers Pokeapi.</p>
-                    <h2 id="about-q6">What's the technology stack?</h2>
-                    <p>Up until November 2018, the API and website were built together in a single Python project using the Django framework and paired with a PostgresQL database to store the data. Django REST Framework was used to expose the data through a RESTful API.</p>
+                    <h1>
+                        About
+                    </h1>
+                    <h2 id="about-q1">
+                        What is this?
+                    </h2>
+                    <p>
+                        This website provides a RESTful API interface to retrieve Pokémon' names in different languages. Using this website, you can learn how to use this API to get data you need.
+                    </p>
+                    <h2 id="about-q2">
+                        What is an API?
+                    </h2>
+                    <p>
+                        An API (Application Programming Interface) is a contract that allow developers to interact with an application through a set of interfaces. In this case, the application is a database of Pokémon names in various languages.
+                        <br/>
+                        <br/>
+                        A RESTful API is an API that conforms to a set of loose conventions based on HTTP verbs, errors, and hyperlinks.
+                    </p>
+                    <h2 id="about-q3">
+                        How much information is stored here?
+                    </h2>
+                    <p>
+                        All Pokémon names up to 7th generation.
+                    </p>
+                    <img src="https://i.kym-cdn.com/photos/images/original/001/150/490/507.jpg"/>
+                    <h2 id="about-q4">
+                        So who built this?
+                    </h2>
+                    <p>
+                        This page was created by Jakub Moryc as a part of his learning routine.
+                        <br/>
+                        <br/>
+                        Check out his portfolio as well as his <a href="https://github.com/jakubmoryc" target="_blank" rel="noopener noreferrer">GitHub page</a> for more projects.
+                    </p>
+                    <h2 id="about-q5">
+                        Where did you get all of this data?
+                    </h2>
+                    <p>
+                        I took a few CSV files from <a href="https://github.com/PokeAPI/pokeapi" target="_blank" rel="noopener noreferrer">PokéAPI's GitHub</a> and combined them into one big array of objects (in fact, my other app uses that array on it's client side) and uploaded it to a database.
+                    </p>
+                    <h2 id="about-q6">
+                        What's the technology stack?
+                    </h2>
+                    <p>
+                        This page itself uses React.js and SASS.
+                        <br/>
+                        <br/>
+                        The API was built with Node, Express.js and MongoDB and it uses Atlas as it's database host whilst the app itself is hosted on Heroku.
+                    </p>
+                    <h2 id="about-q7">
+                    Are there any known bugs?
+                    </h2>
+                    <p>
+                        You can't retrieve data if Pokémon's name includes a hyphen (-). For example Type-Null. For these Pokémon, I recommend using their IDs.
+                    </p>
                 </div>
             </div>
         </div>

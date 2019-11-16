@@ -107,7 +107,7 @@ export default class Homepage extends Component {
                             class="input-group-button"
                             onClick={this.handleSubmit}
                         >
-                            <img src={signIn}></img>
+                            <img src={signIn} alt=""></img>
                         </button>
                         <br/>
                     </div>

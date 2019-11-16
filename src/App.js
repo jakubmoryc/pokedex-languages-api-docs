@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React from 'react';
 
 import './css/app.css';
 
@@ -31,6 +31,25 @@ class App extends React.Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.listenToScroll)
+
+    switch (window.location.pathname) {
+      case "/":
+        this.setState({
+          activePage: "homepage"
+        })
+        break;
+      case "/about":
+          this.setState({
+            activePage: "about"
+          })
+        break;
+      case "/docs":
+          this.setState({
+            activePage: "docs"
+          })
+        break;
+          
+    }
   }
 
   componentWillUnmount() {
