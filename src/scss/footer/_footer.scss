@@ -2,8 +2,7 @@ footer {
     width: 100%;
     height: 50px;
     background: $footer-color;
-
-    padding-right: 2rem;
+    text-align: center;
     
     font-size: 0.9rem;
 
@@ -12,8 +11,18 @@ footer {
     justify-content: flex-end;
 
     > p {
-        > a {
+        margin: auto;
+         a {
             color: white!important;
         }
+        
+        @include for-phone-only {
+            display: flex;
+            flex-flow: column nowrap;
+        }
+    }
+
+    @include for-phone-only {
+        height: fit-content;
     }
 }

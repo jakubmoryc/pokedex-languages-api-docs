@@ -4,13 +4,29 @@ import {
     Link
   } from "react-router-dom";
 
-export default function Navbar({ setActivePage, activePage }) {
+export default function Navbar({ setActivePage, activePage, screenWidth }) {
     return (
         <nav className="navbar">
             <div className="navbar-wrapper">
-                <div className="navbar-logo">
-                    <h1>PokéLANG</h1>
-                </div>
+                {screenWidth > 599 // Don't show the logo if on mobile
+                    ? (
+                    <div className="navbar-logo">
+                        <h1>
+                            <Link 
+                                className={"navbar-menu-item" + (activePage === 'homepage' ? ' active' : '')}
+                                to="/"
+                                onClick={(e) => {
+                                    setActivePage("homepage")
+                                }} 
+                            >
+                                PokéLANG
+                            </Link>
+                        </h1>
+                    </div>
+                    )
+                    :
+                    null
+                }
                 <div className="navbar-menu">
                     <Link 
                         className={"navbar-menu-item" + (activePage === 'homepage' ? ' active' : '')}

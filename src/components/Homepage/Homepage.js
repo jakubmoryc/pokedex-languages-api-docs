@@ -94,7 +94,13 @@ export default class Homepage extends Component {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                https://pokedex-languages-api.herokuapp.com/ 
+                                {this.props.screenWidth > 599 // Shorten the prepend if on mobile
+                                    ? (
+                                        "https://pokedex-languages-api.herokuapp.com/"
+                                    )
+                                    :
+                                        ".../"
+                                }
                             </a>
                         </div>
                         <input
@@ -111,31 +117,7 @@ export default class Homepage extends Component {
                         </button>
                         <br/>
                     </div>
-                    <p>Try:&nbsp; 
-                        <a 
-                            href="#"
-                            onClick={this.handleLinkClick("pokemon")}
-                        >
-                            /pokemon
-                        </a>,&nbsp;
-                        <a 
-                            href="#"
-                            onClick={this.handleLinkClick("pokemon/roserade")}
-                        >
-                            pokemon/roserade
-                        </a>,&nbsp; 
-                        <a 
-                            href="#"
-                            onClick={this.handleLinkClick("pokemon/420")}
-                        >
-                            pokemon/420
-                        </a>,&nbsp; 
-                        <a 
-                            href="#"
-                            onClick={this.handleLinkClick("pokemon/roserade/fr")}
-                        >
-                            pokemon/roserade/fr
-                        </a>
+                    <p>Try: <a href="#" onClick={this.handleLinkClick("pokemon")}>/pokemon </a>, <a href="#" onClick={this.handleLinkClick("pokemon/roserade")}>pokemon/roserade</a>, <a href="#" onClick={this.handleLinkClick("pokemon/420")}>pokemon/420</a>, <a href="#" onClick={this.handleLinkClick("pokemon/roserade/fr")}>pokemon/roserade/fr</a>
                     </p>
                     <h2>Response</h2>
                     <div className="demo-box-result">

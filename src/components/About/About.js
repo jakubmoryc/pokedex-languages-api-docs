@@ -44,7 +44,7 @@ export default function About({ stickyTableOfContents }) {
                     <p>
                         All Pokémon names up to 7th generation.
                     </p>
-                    <img src="https://i.kym-cdn.com/photos/images/original/001/150/490/507.jpg"/>
+                    <img src="https://i.kym-cdn.com/photos/images/original/001/150/490/507.jpg" alt=""/>
                     <h2 id="about-q4">
                         So who built this?
                     </h2>

@@ -5,6 +5,8 @@
     position: fixed;
     top: 0;
 
+    z-index: 1;
+
     display: flex;
     justify-content: center;
 
@@ -21,6 +23,10 @@
         
         .navbar-logo {
             font-family: 'Lobster', cursive;
+            a {
+                color: white;
+                background-color: inherit!important;
+            }
         }
 
         .navbar-menu {
@@ -49,6 +55,22 @@
                     background: darken($color: $accent-color, $amount: 15);
                 }
             }
+
+            @include for-phone-only {
+                width: 100%;
+            }
+        }
+
+        @include for-tablet-landscape  {
+            width: 80%;
+        }
+
+        @include for-tablet-portrait {
+            width: 80%;
+        }
+
+        @include for-phone-only {
+            width: 100%;
         }
     }
 }

@@ -19,6 +19,10 @@
         padding: 0px;
         margin: 0px;
     }
+
+    @include for-mini-phone-only {
+        padding: 2rem;
+    }
 }
 
 .jumbotron-flags {
@@ -29,6 +33,26 @@
     justify-content: space-evenly;
 
     width: 30%;
+
+    @include for-desktop {
+        width: 40%;
+    }
+
+    @include for-tablet-landscape {
+        width: 60%;
+    }
+
+    @include for-tablet-portrait {
+        width: 80%;
+    }
+
+    @include for-phone-only {
+        width: 100%;
+
+        img {
+            width: 30px;
+        }
+    }
 }
 
 .flag-icon {
@@ -72,11 +96,14 @@
 
             color: black;
             background: #D3D3D3;
-
         }
 
         input {
             border: none;
+
+            @include for-mini-phone-only {
+                width: 150px;
+            }
         }
 
         button {
@@ -111,5 +138,19 @@
             min-height: 50vh;
             max-height: 50vh;
         }
+    }
+
+    @include for-tablet-landscape  {
+        width: 80%;
+    }
+
+    @include for-tablet-portrait {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    @include for-phone-only {
+        width: 100%;
+        padding: 2rem;
     }
 }

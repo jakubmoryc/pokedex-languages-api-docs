@@ -20,7 +20,8 @@ class App extends React.Component {
   state = {
     activePage: "homepage",
     scrollPos: undefined,
-    stickyTableOfContents: false
+    stickyTableOfContents: false,
+    screenWidth: undefined
   }
 
   setActivePage = (newPage) => {
@@ -29,9 +30,7 @@ class App extends React.Component {
     })
   }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll)
-
+  setActivePageOnLoad = () => {
     switch (window.location.pathname) {
       case "/":
         this.setState({
@@ -39,36 +38,56 @@ class App extends React.Component {
         })
         break;
       case "/about":
-          this.setState({
-            activePage: "about"
-          })
+        this.setState({
+          activePage: "about"
+        })
         break;
       case "/docs":
-          this.setState({
-            activePage: "docs"
-          })
+        this.setState({
+          activePage: "docs"
+        })
         break;
-          
+      default:
+        this.setState({
+          activePage: "homepage"
+        })
+        break; 
     }
+  }
+
+  handleResize = () => {
+    this.setState({
+      screenWidth: window.innerWidth
+    })
+  }
+
+  listenToScroll = () => {
+    this.setState({
+      scrollPos: window.pageYOffset,
+    })
+    if(this.state.scrollPos > 50) {
+      this.setState({
+        stickyTableOfContents: true
+      })
+    } else {
+      this.setState({
+        stickyTableOfContents: false
+      })
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenToScroll)
+    window.addEventListener('resize', this.handleResize)
+
+    this.handleResize()
+
+    this.setActivePageOnLoad()
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.listenToScroll)
-  }
-
-  listenToScroll = () => {
-  this.setState({
-    scrollPos: window.pageYOffset,
-  })
-  if(this.state.scrollPos > 50) {
-    this.setState({
-      stickyTableOfContents: true
-    })
-  } else {
-    this.setState({
-      stickyTableOfContents: false
-    })
-  }
+    window.removeEventListener('resize', this.handleResize)
   }
 
   render() {
@@ -77,6 +96,7 @@ class App extends React.Component {
         <Navbar 
             setActivePage={this.setActivePage}
             activePage={this.state.activePage}
+            screenWidth={this.state.screenWidth}
           />
         <div className="app">
           <Switch>
@@ -87,13 +107,14 @@ class App extends React.Component {
               <About stickyTableOfContents={this.state.stickyTableOfContents}/>
             </Route>
             <Route path="/" exact>
-              <Homepage/>
+              <Homepage screenWidth={this.state.screenWidth}/>
             </Route>
             <Route path="*">
               <Redirect push to="/"/>
             </Route>
           </Switch>
           <Footer/>
+          {this.state.horizontalWidth}
         </div>
       </Router>
     );

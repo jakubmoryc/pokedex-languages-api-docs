@@ -182,6 +182,7 @@ pre[class*="language-"] {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 1;
   display: flex;
   justify-content: center;
   background: #db3d44;
@@ -193,6 +194,9 @@ pre[class*="language-"] {
     align-items: center; }
     .navbar .navbar-wrapper .navbar-logo {
       font-family: 'Lobster', cursive; }
+      .navbar .navbar-wrapper .navbar-logo a {
+        color: white;
+        background-color: inherit !important; }
     .navbar .navbar-wrapper .navbar-menu {
       display: flex;
       align-items: center;
@@ -210,6 +214,18 @@ pre[class*="language-"] {
         transition-duration: 250ms; }
         .navbar .navbar-wrapper .navbar-menu .navbar-menu-item:hover {
           background: #ac2026; }
+      @media (max-width: 599px) {
+        .navbar .navbar-wrapper .navbar-menu {
+          width: 100%; } }
+    @media (min-width: 900px) and (max-width: 1199px) {
+      .navbar .navbar-wrapper {
+        width: 80%; } }
+    @media (min-width: 600px) and (max-width: 899px) {
+      .navbar .navbar-wrapper {
+        width: 80%; } }
+    @media (max-width: 599px) {
+      .navbar .navbar-wrapper {
+        width: 100%; } }
 
 .active {
   background: #ac2026; }
@@ -229,6 +245,9 @@ pre[class*="language-"] {
     margin-top: 0;
     padding: 0px;
     margin: 0px; }
+  @media (max-width: 375px) {
+    .jumbotron {
+      padding: 2rem; } }
 
 .jumbotron-flags {
   margin: auto;
@@ -236,6 +255,20 @@ pre[class*="language-"] {
   flex-flow: row wrap;
   justify-content: space-evenly;
   width: 30%; }
+  @media (min-width: 1200px) and (max-width: 1799px) {
+    .jumbotron-flags {
+      width: 40%; } }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .jumbotron-flags {
+      width: 60%; } }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .jumbotron-flags {
+      width: 80%; } }
+  @media (max-width: 599px) {
+    .jumbotron-flags {
+      width: 100%; }
+      .jumbotron-flags img {
+        width: 30px; } }
 
 .flag-icon {
   width: 50px;
@@ -269,6 +302,9 @@ pre[class*="language-"] {
       background: #D3D3D3; }
     .demo-box .input-group input {
       border: none; }
+      @media (max-width: 375px) {
+        .demo-box .input-group input {
+          width: 150px; } }
     .demo-box .input-group button {
       display: flex;
       flex-flow: column nowrap;
@@ -289,6 +325,17 @@ pre[class*="language-"] {
     .demo-box .demo-box-result pre {
       min-height: 50vh;
       max-height: 50vh; }
+  @media (min-width: 900px) and (max-width: 1199px) {
+    .demo-box {
+      width: 80%; } }
+  @media (min-width: 600px) and (max-width: 899px) {
+    .demo-box {
+      width: 100%;
+      padding: 2rem; } }
+  @media (max-width: 599px) {
+    .demo-box {
+      width: 100%;
+      padding: 2rem; } }
 
 .about {
   min-height: 100vh; }
@@ -300,12 +347,21 @@ footer {
   width: 100%;
   height: 50px;
   background: #0f0f0f;
-  padding-right: 2rem;
+  text-align: center;
   font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: flex-end; }
-  footer > p > a {
-    color: white !important; }
+  footer > p {
+    margin: auto; }
+    footer > p a {
+      color: white !important; }
+    @media (max-width: 599px) {
+      footer > p {
+        display: flex;
+        flex-flow: column nowrap; } }
+  @media (max-width: 599px) {
+    footer {
+      height: fit-content; } }
 
 /*# sourceMappingURL=app.css.map */

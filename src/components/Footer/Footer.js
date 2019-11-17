@@ -4,7 +4,9 @@ export default function Footer() {
     return (
         <footer>
             <p>
-                &#9400; 2019 Jakub Moryc <a href="#">See my portfolio</a> Pokémon and Pokémon character names are trademarks of Nintendo. 
+                <span>&#9400; 2019 Jakub Moryc </span>
+                <span><a href="#">See my portfolio </a></span>
+                <span>Pokémon and Pokémon character names are trademarks of Nintendo. </span>
             </p>
         </footer>
     )
