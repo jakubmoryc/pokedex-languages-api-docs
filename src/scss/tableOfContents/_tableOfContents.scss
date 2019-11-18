@@ -5,18 +5,44 @@
     width: 70%;
 
     align-items: flex-start;
+
+    @include for-desktop {
+        width: 80%;
+    }
+
+    @include for-tablet-landscape {
+        width: 90%;
+    }
+
+    @include for-tablet-portrait {
+        width: 100%;
+    }
+
+    @include for-phone-only {
+        width: 100%;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
 }
 
 .tableOfContents-wrapper {
+    position: sticky;
+    top: 0;
 
     flex: 30%;
 
-    display: flex;
-    justify-content: flex-end;
+    margin-top: 2.5rem;
+
+    @include for-phone-only {
+        position: inherit;
+        width: 100%;
+    }
 }
 
 .tableOfContents {
-    padding: 5rem 2rem;
+    padding: 2rem 2rem;
 
     border-right: 2px solid white;
     
@@ -24,16 +50,21 @@
         line-height: 200%;
         font-size: 1.1rem;
     }
-}
 
-.sticky {
-    position: fixed;
-    top: 50px;
+    @include for-phone-only {
+        border: none;
+        padding: 3rem 2rem;
+        background-color: $base-color;
+    }
 }
 
 .content {
     flex: 70%;
     padding: 4rem 4rem;
+
+    @include for-phone-only {
+        padding: 3rem 2rem;
+    }
 }
 
 .content img {

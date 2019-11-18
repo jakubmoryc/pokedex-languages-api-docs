@@ -1,13 +1,12 @@
 import React from 'react'
 
-export default function Docs({stickyTableOfContents}) {
-    const tableOfContentsClasses = "tableOfContents " + (stickyTableOfContents ? "sticky" : "")
+export default function Docs() {
 
     return (
         <div className="about">
             <div className="pageWrapper">
                 <div className="tableOfContents-wrapper">
-                    <div className={tableOfContentsClasses}>
+                    <div className="tableOfContents">
                         <ol>
                             <li><a href="#about-q1">What is this?</a></li>
                             <li><a href="#about-q2">What is an API?</a></li>

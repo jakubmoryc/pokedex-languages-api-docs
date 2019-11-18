@@ -19,8 +19,6 @@ import Footer from './components/Footer/Footer';
 class App extends React.Component {
   state = {
     activePage: "homepage",
-    scrollPos: undefined,
-    stickyTableOfContents: false,
     screenWidth: undefined
   }
 
@@ -61,23 +59,7 @@ class App extends React.Component {
     })
   }
 
-  listenToScroll = () => {
-    this.setState({
-      scrollPos: window.pageYOffset,
-    })
-    if(this.state.scrollPos > 50) {
-      this.setState({
-        stickyTableOfContents: true
-      })
-    } else {
-      this.setState({
-        stickyTableOfContents: false
-      })
-    }
-  }
-
   componentDidMount() {
-    window.addEventListener('scroll', this.listenToScroll)
     window.addEventListener('resize', this.handleResize)
 
     this.handleResize()
@@ -86,7 +68,6 @@ class App extends React.Component {
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.listenToScroll)
     window.removeEventListener('resize', this.handleResize)
   }
 
@@ -101,10 +82,10 @@ class App extends React.Component {
         <div className="app">
           <Switch>
             <Route path="/docs">
-              <Docs stickyTableOfContents={this.state.stickyTableOfContents}/>
+              <Docs/>
             </Route>
             <Route path="/about">
-              <About stickyTableOfContents={this.state.stickyTableOfContents}/>
+              <About/>
             </Route>
             <Route path="/" exact>
               <Homepage screenWidth={this.state.screenWidth}/>

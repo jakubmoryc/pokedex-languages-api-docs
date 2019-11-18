@@ -62,8 +62,9 @@ export default class Homepage extends Component {
         e.preventDefault()
         this.setState({
             inputValue: url
+        }, () => {
+            this.handleSubmit()
         })
-        this.handleSubmit()
     };
 
 
