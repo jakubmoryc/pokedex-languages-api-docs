@@ -35,9 +35,16 @@
 
     margin-top: 2.5rem;
 
+    white-space: nowrap;
+
     @include for-phone-only {
         position: inherit;
         width: 100%;
+        white-space: normal;
+    }
+
+    @include for-tablet-portrait {
+        white-space: normal;
     }
 }
 
@@ -45,6 +52,8 @@
     padding: 2rem 2rem;
 
     border-right: 2px solid white;
+
+    background-color: $base-color;
     
     li {
         line-height: 200%;
@@ -54,12 +63,11 @@
     @include for-phone-only {
         border: none;
         padding: 3rem 2rem;
-        background-color: $base-color;
     }
 }
 
 .content {
-    flex: 70%;
+    flex: 70% 0 0;
     padding: 4rem 4rem;
 
     @include for-phone-only {

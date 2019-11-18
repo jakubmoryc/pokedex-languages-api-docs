@@ -5,6 +5,7 @@
 
 * {
     box-sizing: border-box;
+    font-weight: 400;
 }
 
 body {
@@ -37,4 +38,5 @@ a {
 @import './navbar/navbar';
 @import './homepage/homepage';
 @import './about/about';
+@import './docs/docs';
 @import './footer/footer';

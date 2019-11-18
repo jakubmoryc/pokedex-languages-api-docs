@@ -26,7 +26,7 @@ export default function About() {
                         What is this?
                     </h2>
                     <p>
-                        This website provides a RESTful API interface to retrieve Pokémon' names in different languages. Using this website, you can learn how to use this API to get data you need.
+                        This website provides a RESTful, GET-Only API interface to retrieve Pokémon' names in different languages. Using this website, you can learn how to use this API to get data you need.
                     </p>
                     <h2 id="about-q2">
                         What is an API?

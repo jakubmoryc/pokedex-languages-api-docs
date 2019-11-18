@@ -1,0 +1,50 @@
+.big-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.path {
+    background-color: $base-color;
+
+    padding: 3rem;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    .path-get-span {
+        background-color: $accent-compl-color;
+        border-radius: 6px;
+        padding: 0.25rem;
+    }
+
+    .path-type-span {
+        background-color: $type-span-color;
+        border-radius: 6px;
+        padding: 0.25rem;
+    }
+
+    .parameters-header {
+        p {
+            opacity: 0.65;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    }
+    
+    .path-parameters {
+        background-color: $fill-color;
+        padding-bottom: 1rem;
+    }
+
+    .path-sample {
+        background-color: $fill-color;
+        padding-bottom: 1rem;
+
+        h3, p {
+            margin-top: 0;
+        }
+    }
+}
+
+
