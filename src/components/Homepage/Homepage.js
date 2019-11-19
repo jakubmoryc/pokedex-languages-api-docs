@@ -77,12 +77,12 @@ export default class Homepage extends Component {
                     <div className="jumbotron-flags">
                         <img src={uk} alt="" className="flag-icon"/>
                         <img src={de} alt="" className="flag-icon"/>
+                        <img src={fr} alt="" className="flag-icon"/>
                         <img src={it} alt="" className="flag-icon"/>
                         <img src={es} alt="" className="flag-icon"/>
                         <img src={jp} alt="" className="flag-icon"/>
                         <img src={kr} alt="" className="flag-icon"/>
                         <img src={cn} alt="" className="flag-icon"/>
-                        <img src={fr} alt="" className="flag-icon"/>
                     </div>
                 </div>
                 <h1>Try it now!</h1>

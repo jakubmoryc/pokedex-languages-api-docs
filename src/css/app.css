@@ -387,13 +387,28 @@ pre[class*="language-"] {
 .about p {
   margin-bottom: 4rem; }
 
+@media (max-width: 1200px) {
+  .page-docs {
+    width: 100%;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; } }
+
+@media (max-width: 1200px) {
+  .tableOfContents-wrapper-docs {
+    position: inherit;
+    width: 100%;
+    white-space: normal; } }
+
 .big-header {
   text-align: center;
   margin-bottom: 3rem; }
 
 .path {
   background-color: #222222;
-  padding: 3rem; }
+  padding: 3rem;
+  margin-bottom: 3rem; }
   .path p {
     margin-bottom: 0; }
   .path .path-get-span {
@@ -404,6 +419,10 @@ pre[class*="language-"] {
     background-color: #474847;
     border-radius: 6px;
     padding: 0.25rem; }
+  .path .path-required-span {
+    background-color: #db3d44;
+    border-radius: 6px;
+    padding: 0.25rem; }
   .path .parameters-header p {
     opacity: 0.65;
     text-align: center;
@@ -411,11 +430,10 @@ pre[class*="language-"] {
   .path .path-parameters {
     background-color: #262626;
     padding-bottom: 1rem; }
-  .path .path-sample {
-    background-color: #262626;
-    padding-bottom: 1rem; }
-    .path .path-sample h3, .path .path-sample p {
-      margin-top: 0; }
+    .path .path-parameters li {
+      line-height: 2rem; }
+    .path .path-parameters ul {
+      padding-right: 40px; }
 
 footer {
   width: 100%;

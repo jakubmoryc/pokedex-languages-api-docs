@@ -1,3 +1,21 @@
+.page-docs {
+    @include for-desktop-below {
+        width: 100%;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+}
+
+.tableOfContents-wrapper-docs {
+    @include for-desktop-below {
+        position: inherit;
+        width: 100%;
+        white-space: normal;
+    }
+}
+
 .big-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -7,6 +25,8 @@
     background-color: $base-color;
 
     padding: 3rem;
+
+    margin-bottom: 3rem;
 
     p {
         margin-bottom: 0;
@@ -24,6 +44,12 @@
         padding: 0.25rem;
     }
 
+    .path-required-span {
+        background-color: $accent-color;
+        border-radius: 6px;
+        padding: 0.25rem;
+    }
+
     .parameters-header {
         p {
             opacity: 0.65;
@@ -35,14 +61,13 @@
     .path-parameters {
         background-color: $fill-color;
         padding-bottom: 1rem;
-    }
+        
+        li {
+            line-height: 2rem;
+        }
 
-    .path-sample {
-        background-color: $fill-color;
-        padding-bottom: 1rem;
-
-        h3, p {
-            margin-top: 0;
+        ul {
+            padding-right: 40px;
         }
     }
 }
