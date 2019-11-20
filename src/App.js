@@ -16,6 +16,8 @@ import About from './components/About/About';
 import Docs from './components/Docs/Docs';
 import Footer from './components/Footer/Footer';
 
+import GitHubButton from './components/GitHubButton/GitHubButton'
+
 class App extends React.Component {
   state = {
     activePage: "homepage",
@@ -97,6 +99,7 @@ class App extends React.Component {
           <Footer/>
           {this.state.horizontalWidth}
         </div>
+        <GitHubButton/>
       </Router>
     );
 

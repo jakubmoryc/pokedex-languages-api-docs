@@ -223,6 +223,33 @@ pre[class*="language-"] {
   height: auto;
   width: 100%; }
 
+.github-button {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  padding: 1rem;
+  background: #db3d44;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px; }
+  @media (max-width: 1200px) {
+    .github-button {
+      padding: 0.66rem; } }
+  .github-button div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .github-button div img {
+      height: 36px;
+      width: 36px;
+      filter: invert(100%); }
+      @media (max-width: 1200px) {
+        .github-button div img {
+          height: 24px;
+          width: 24px; } }
+
 .navbar {
   height: 50px;
   width: 100%;

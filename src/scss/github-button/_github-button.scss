@@ -1,0 +1,36 @@
+.github-button {
+    position: fixed;
+    bottom: 20px;
+    right: 50px;
+
+    padding: 1rem;
+    background: $accent-color;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 4px 8px;
+
+    @include for-desktop-below {
+        padding: 0.66rem;
+    }
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 36px;
+            width: 36px;
+            filter: invert(100%);
+
+            @include for-desktop-below {
+                height: 24px;
+                width: 24px;
+            }
+        }
+    } 
+
+}
