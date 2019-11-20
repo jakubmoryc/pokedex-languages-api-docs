@@ -18,32 +18,45 @@ import {
 export default class Homepage extends Component {
     state = {
         result: "No results yet",
-        inputValue: ""
+        inputValue: "",
+        isLoading: false
     }
 
     fetchResults = () => {
         const link = "https://pokedex-languages-api.herokuapp.com/" + this.state.inputValue
+
+        if(this.state.isLoading) {
+            return
+        } else {
+            this.setState({
+                isLoading: true
+            })
+        }
+
         fetch(link)
             .then(res => {
                 if(res.status !== 200) {
                     res.json()
                         .then(data => {
                             this.setState({
-                                result: "Error: " + res.status.toString() + " - " + JSON.stringify(data.msg)
+                                result: "Error: " + res.status.toString() + " - " + JSON.stringify(data.msg),
+                                isLoading: false
                             })
                         })
                 } else {
                     res.json()
                         .then(data => {
                             this.setState({
-                                result: JSON.stringify(data, null, 2)
+                                result: JSON.stringify(data, null, 2),
+                                isLoading: false
                             })
                         })
                 }
             })
             .catch((err) => {
                 this.setState({
-                    result: "Failed to fetch. Service may be unavailable (503 Status Code)"
+                    result: "Failed to fetch. Service may be unavailable (503 Status Code)",
+                    isLoading: false
                 })
             })
     }
@@ -118,6 +131,7 @@ export default class Homepage extends Component {
                         <button 
                             class="input-group-button"
                             onClick={this.handleSubmit}
+                            disabled={this.state.isLoading}
                         >
                             <img src={signIn} alt=""></img>
                         </button>
@@ -127,9 +141,19 @@ export default class Homepage extends Component {
                     </p>
                     <h2>Response</h2>
                     <div className="demo-box-result">
-                        <pre>
-                            <code class="language-json">
-                                {this.state.result}
+                        <pre className={this.state.isLoading ? "spinner" : ""}>
+                            <code>
+                                {this.state.isLoading 
+                                    ?
+                                    <div>
+                                        <div class="lds-ring">
+                                            <div></div><div></div><div></div><div></div>
+                                        </div>
+                                        <p>Fetching...</p>
+                                    </div>
+                                    :
+                                    this.state.result
+                                }
                             </code>
                         </pre>
                     </div>
