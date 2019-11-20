@@ -75,7 +75,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router basename="https://jakubmoryc.github.io/pokedex-languages-api-docs/">
+      <Router basename="">
         <Navbar 
             setActivePage={this.setActivePage}
             activePage={this.state.activePage}
