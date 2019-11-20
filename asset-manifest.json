@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/pokedex-languages-api-docs/./static/css/main.dbe2cfd0.chunk.css",
+    "main.js": "/pokedex-languages-api-docs/./static/js/main.7a30d084.chunk.js",
+    "main.js.map": "/pokedex-languages-api-docs/./static/js/main.7a30d084.chunk.js.map",
+    "runtime-main.js": "/pokedex-languages-api-docs/./static/js/runtime-main.e7bb4cc4.js",
+    "runtime-main.js.map": "/pokedex-languages-api-docs/./static/js/runtime-main.e7bb4cc4.js.map",
+    "static/js/2.7c5903a4.chunk.js": "/pokedex-languages-api-docs/./static/js/2.7c5903a4.chunk.js",
+    "static/js/2.7c5903a4.chunk.js.map": "/pokedex-languages-api-docs/./static/js/2.7c5903a4.chunk.js.map",
+    "index.html": "/pokedex-languages-api-docs/./index.html",
+    "precache-manifest.cd464a15324d8a5654d065b3d5c85872.js": "/pokedex-languages-api-docs/./precache-manifest.cd464a15324d8a5654d065b3d5c85872.js",
+    "service-worker.js": "/pokedex-languages-api-docs/./service-worker.js",
+    "static/css/main.dbe2cfd0.chunk.css.map": "/pokedex-languages-api-docs/./static/css/main.dbe2cfd0.chunk.css.map",
+    "static/media/china.svg": "/pokedex-languages-api-docs/./static/media/china.7f8455b7.svg",
+    "static/media/france.svg": "/pokedex-languages-api-docs/./static/media/france.968aaa24.svg",
+    "static/media/germany.svg": "/pokedex-languages-api-docs/./static/media/germany.d810f621.svg",
+    "static/media/github-logo.svg": "/pokedex-languages-api-docs/./static/media/github-logo.76d344f0.svg",
+    "static/media/italy.svg": "/pokedex-languages-api-docs/./static/media/italy.612e617f.svg",
+    "static/media/japan.svg": "/pokedex-languages-api-docs/./static/media/japan.1f905d23.svg",
+    "static/media/sign-in.svg": "/pokedex-languages-api-docs/./static/media/sign-in.7a910bbe.svg",
+    "static/media/south-korea.svg": "/pokedex-languages-api-docs/./static/media/south-korea.8a067f19.svg",
+    "static/media/spain.svg": "/pokedex-languages-api-docs/./static/media/spain.36938bbe.svg",
+    "static/media/united-kingdom.svg": "/pokedex-languages-api-docs/./static/media/united-kingdom.e5564902.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e7bb4cc4.js",
+    "static/js/2.7c5903a4.chunk.js",
+    "static/css/main.dbe2cfd0.chunk.css",
+    "static/js/main.7a30d084.chunk.js"
+  ]
+}
