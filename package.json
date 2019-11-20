@@ -2,7 +2,7 @@
   "name": "pokedex-languages-rest-api-docs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jakubmoryc.github.io/pokelang-rest-api-documentation/.",
+  "homepage": "https://jakubmoryc.github.io/pokedex-languages-api-docs/.",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.10.2",
