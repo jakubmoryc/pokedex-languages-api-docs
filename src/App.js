@@ -88,7 +88,7 @@ class App extends React.Component {
               <About/>
             </Route>
             <Route path="/" exact>
-              <Homepage screenWidth={this.state.screenWidth}/>
+              <Homepage screenWidth={this.state.screenWidth} setActivePage={this.setActivePage}/>
             </Route>
             <Route path="*">
               <Redirect push to="/"/>

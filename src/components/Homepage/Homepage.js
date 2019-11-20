@@ -86,7 +86,12 @@ export default class Homepage extends Component {
                     </div>
                 </div>
                 <h1>Try it now!</h1>
-                <h3>And <Link to="/docs">check out the docs!</Link></h3>
+                <h3>And <Link 
+                            to="/docs"
+                            onClick={(e) => {
+                                this.props.setActivePage("docs")
+                            }}
+                        >check out the docs!</Link></h3>
                 <div className="demo-box">
                     <div className="input-group">
                         <div class="input-group-prepend">
