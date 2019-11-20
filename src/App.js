@@ -75,7 +75,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router basename="">
+      <Router basename={process.env.PUBLIC_URL}>
         <Navbar 
             setActivePage={this.setActivePage}
             activePage={this.state.activePage}
