@@ -5,7 +5,7 @@ import './css/app.css';
 import Navbar from './components/Navbar/Navbar';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect
@@ -75,7 +75,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <Router basename="https://jakubmoryc.github.io/pokedex-languages-api-docs/">
         <Navbar 
             setActivePage={this.setActivePage}
             activePage={this.state.activePage}
