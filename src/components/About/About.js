@@ -5,17 +5,20 @@ export default function About() {
     return (
         <div className="about">
             <div className="pageWrapper">
-                <div className="tableOfContents-wrapper">
-                    <div className="tableOfContents">
-                        <ol>
-                            <li><a href="#about-q1">What is this?</a></li>
-                            <li><a href="#about-q2">What is an API?</a></li>
-                            <li><a href="#about-q3">How much information is stored here?</a></li>
-                            <li><a href="#about-q4">So who built this?</a></li>
-                            <li><a href="#about-q5">Where did you get all of this data?</a></li>
-                            <li><a href="#about-q6">What's the technology stack?</a></li>
-                            <li><a href="#about-q7">Are there any known bugs?</a></li>
-                        </ol>
+                <div className="tableOfContents-sticky">
+                    <div className="tableOfContents-wrapper tableOfContents-wrapper-docs ">
+                        <div className="tableOfContents">
+                            <ul>
+                                <h2>Pokémon</h2>
+                                <li><a href="#path1">GET /pokemon/</a></li>
+                                <li><a href="#path2">{"GET /pokemon/{pokemon_id}"}</a></li>
+                                <li><a href="#path3">{"GET /pokemon/{pokemon_name}"}</a></li>
+                                <li><a href="#path4">{"GET /pokemon/{pokemon_id}/{language}"}</a></li>
+                                <li><a href="#path5">{"GET /pokemon/{pokemon_name}/{language}"}</a></li>
+                                <h2>Other</h2>
+                                <li><a href="#path6">GET /</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="content">

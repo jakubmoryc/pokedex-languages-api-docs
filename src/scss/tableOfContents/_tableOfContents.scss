@@ -27,21 +27,23 @@
     }
 }
 
-.tableOfContents-wrapper {
+.tableOfContents-sticky {
     position: sticky;
     top: 0;
-
-    flex: 30%;
-
-    margin-top: 2.5rem;
-
-    white-space: nowrap;
 
     @include for-phone-only {
         position: inherit;
         width: 100%;
         white-space: normal;
     }
+}
+
+.tableOfContents-wrapper {
+    flex: 30%;
+
+    margin-top: 2.5rem;
+
+    white-space: nowrap;
 
     @include for-tablet-portrait {
         white-space: normal;
@@ -51,7 +53,7 @@
 .tableOfContents {
     padding: 2rem 2rem;
 
-    border-right: 2px solid white;
+    border-right: 3px solid white;
 
     background-color: $base-color;
     

@@ -5,18 +5,20 @@ export default function Docs() {
     return (
         <div className="docs">
             <div className="pageWrapper page-docs">
-                <div className="tableOfContents-wrapper tableOfContents-wrapper-docs ">
-                    <div className="tableOfContents">
-                        <ul>
-                            <h2>Pokémon</h2>
-                            <li><a href="#path1">GET /pokemon/</a></li>
-                            <li><a href="#path2">{"GET /pokemon/{pokemon_id}"}</a></li>
-                            <li><a href="#path3">{"GET /pokemon/{pokemon_name}"}</a></li>
-                            <li><a href="#path4">{"GET /pokemon/{pokemon_id}/{language}"}</a></li>
-                            <li><a href="#path5">{"GET /pokemon/{pokemon_name}/{language}"}</a></li>
-                            <h2>Other</h2>
-                            <li><a href="#path6">GET /</a></li>
-                        </ul>
+                <div className="tableOfContents-sticky">
+                    <div className="tableOfContents-wrapper tableOfContents-wrapper-docs ">
+                        <div className="tableOfContents">
+                            <ul>
+                                <h2>Pokémon</h2>
+                                <li><a href="#path1">GET /pokemon/</a></li>
+                                <li><a href="#path2">{"GET /pokemon/{pokemon_id}"}</a></li>
+                                <li><a href="#path3">{"GET /pokemon/{pokemon_name}"}</a></li>
+                                <li><a href="#path4">{"GET /pokemon/{pokemon_id}/{language}"}</a></li>
+                                <li><a href="#path5">{"GET /pokemon/{pokemon_name}/{language}"}</a></li>
+                                <h2>Other</h2>
+                                <li><a href="#path6">GET /</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="content content-docs">

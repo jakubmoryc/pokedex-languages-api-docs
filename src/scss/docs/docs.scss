@@ -8,11 +8,19 @@
     }
 }
 
-.tableOfContents-wrapper-docs {
+.tableOfContents-sticky {
     @include for-desktop-below {
         position: inherit;
         width: 100%;
         white-space: normal;
+    }
+}
+
+.tableOfContents-wrapper-docs ul {
+    
+    @include for-desktop-below {
+        width: fit-content;
+        margin: auto;
     }
 }
 
