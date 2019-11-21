@@ -25,7 +25,7 @@ export default function Docs() {
                     <h1 className="big-header">Pokémon Routes</h1>
 
                     <div className="path">
-                        <h2><span className="path-get-span">GET</span>/pokemon/</h2>
+                        <h2><span className="path-get-span">GET</span> /pokemon/</h2>
                         <p>Fetch data with all Pokémon or search many Pokémon using a string.</p>
                         <div className="path-parameters">
                             <h3 className="parameters-header">
