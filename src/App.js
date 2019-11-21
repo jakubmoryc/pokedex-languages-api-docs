@@ -5,7 +5,7 @@ import './css/app.css';
 import Navbar from './components/Navbar/Navbar';
 
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Redirect
