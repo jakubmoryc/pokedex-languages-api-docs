@@ -16,6 +16,10 @@
         padding: 0.66rem;
     }
 
+    &:hover {
+        background: darken($color: $accent-color, $amount: 15);
+    }
+
     div {
         display: flex;
         justify-content: center;

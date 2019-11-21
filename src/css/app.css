@@ -251,6 +251,8 @@ pre[class*="language-"] {
   @media (max-width: 1200px) {
     .github-button {
       padding: 0.66rem; } }
+  .github-button:hover {
+    background: #ac2026; }
   .github-button div {
     display: flex;
     justify-content: center;
