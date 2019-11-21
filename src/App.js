@@ -31,18 +31,18 @@ class App extends React.Component {
   }
 
   setActivePageOnLoad = () => {
-    switch (window.location.pathname) {
-      case "/":
+    switch (window.location.hash) {
+      case "#/":
         this.setState({
           activePage: "homepage"
         })
         break;
-      case "/about":
+      case "#/about":
         this.setState({
           activePage: "about"
         })
         break;
-      case "/docs":
+      case "#/docs":
         this.setState({
           activePage: "docs"
         })
@@ -62,11 +62,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    this.setActivePageOnLoad()
+    
     window.addEventListener('resize', this.handleResize)
 
     this.handleResize()
-
-    this.setActivePageOnLoad()
   }
 
   componentWillUnmount() {
