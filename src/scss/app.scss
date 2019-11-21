@@ -30,6 +30,14 @@ a {
 
 .app {
     padding-top: 50px;
+
+    @include for-phone-only {
+        font-size: 14px;
+    }
+
+    @include for-mini-phone-only {
+        font-size: 12px;
+    }
 }
 
 @import './code/code';

@@ -65,7 +65,13 @@
     @include for-phone-only {
         border: none;
         padding: 3rem 2rem;
+        white-space: normal;
+        word-break: break-all;
     }
+
+    @include for-mini-phone-only {
+        padding: 3rem 0.5rem;
+      }
 }
 
 .content {
@@ -75,6 +81,10 @@
     @include for-phone-only {
         padding: 3rem 2rem;
     }
+
+    @include for-mini-phone-only {
+        padding: 3rem 1rem;
+      }
 }
 
 .content img {

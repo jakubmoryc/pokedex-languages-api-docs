@@ -6,78 +6,91 @@
         align-items: center;
         margin-top: 0;
     }
-}
 
-.tableOfContents-sticky {
-    @include for-desktop-below {
-        position: inherit;
-        width: 100%;
-        white-space: normal;
-    }
-}
+    .tableOfContents-sticky {
+        @include for-desktop-below {
+            position: inherit;
+            width: 100%;
+            white-space: normal;
+        }
 
-.tableOfContents-wrapper-docs ul {
+        .tableOfContents-wrapper-docs ul {
     
-    @include for-desktop-below {
-        width: fit-content;
-        margin: auto;
-    }
-}
-
-.big-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.path {
-    background-color: $base-color;
-
-    padding: 3rem;
-
-    margin-bottom: 3rem;
-
-    p {
-        margin-bottom: 0;
-    }
-
-    .path-get-span {
-        background-color: $accent-compl-color;
-        border-radius: 6px;
-        padding: 0.25rem;
-    }
-
-    .path-type-span {
-        background-color: $type-span-color;
-        border-radius: 6px;
-        padding: 0.25rem;
-    }
-
-    .path-required-span {
-        background-color: $accent-color;
-        border-radius: 6px;
-        padding: 0.25rem;
-    }
-
-    .parameters-header {
-        p {
-            opacity: 0.65;
-            text-align: center;
-            text-transform: uppercase;
+            @include for-desktop-below {
+                width: fit-content;
+                margin: auto;
+            }
         }
     }
-    
-    .path-parameters {
-        background-color: $fill-color;
-        padding-bottom: 1rem;
+
+    .big-header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .content-docs {
+        .path {
+            background-color: $base-color;
         
-        li {
-            line-height: 2rem;
-        }
+            padding: 3rem;
+        
+            margin-bottom: 3rem;
+        
+            .path-get-span {
+                background-color: $accent-compl-color;
+                border-radius: 6px;
+                padding: 0.25rem;
+            }
+        
+            .path-type-span {
+                background-color: $type-span-color;
+                border-radius: 6px;
+                padding: 0.25rem;
+            }
+        
+            .path-required-span {
+                background-color: $accent-color;
+                border-radius: 6px;
+                padding: 0.25rem;
+            }
+        
+            .parameters-header {
+                p {
+                    opacity: 0.65;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+            }
+            
+            .path-parameters {
+                background-color: $fill-color;
+                padding-bottom: 1rem;
+                
+                li {
+                    line-height: 2rem;
+                }
+        
+                ul {
+                    padding-right: 40px;
+                }
+            }
 
-        ul {
-            padding-right: 40px;
+            @include for-phone-only  {
+                padding: 0 0 2rem 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+        
+        @include for-phone-only  {
+            padding: 3rem 0rem;
         }
     }
 }
-
 
