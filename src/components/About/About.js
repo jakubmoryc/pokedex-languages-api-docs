@@ -1,22 +1,23 @@
 import React from 'react'
 
+import { HashLink as Link } from 'react-router-hash-link'
+
 export default function About() {
 
     return (
         <div className="about">
-            <div className="pageWrapper">
+            <div className="pageWrapper page-docs">
                 <div className="tableOfContents-sticky">
                     <div className="tableOfContents-wrapper tableOfContents-wrapper-docs ">
                         <div className="tableOfContents">
                             <ul>
-                                <h2>Pokémon</h2>
-                                <li><a href="#path1">GET /pokemon/</a></li>
-                                <li><a href="#path2">{"GET /pokemon/{pokemon_id}"}</a></li>
-                                <li><a href="#path3">{"GET /pokemon/{pokemon_name}"}</a></li>
-                                <li><a href="#path4">{"GET /pokemon/{pokemon_id}/{language}"}</a></li>
-                                <li><a href="#path5">{"GET /pokemon/{pokemon_name}/{language}"}</a></li>
-                                <h2>Other</h2>
-                                <li><a href="#path6">GET /</a></li>
+                                <li><Link smooth to="/about#about-q1">What is this?</Link></li>
+                                <li><Link smooth to="/about#about-q2">What is an API?</Link></li>
+                                <li><Link smooth to="/about#about-q3">How much information is stored here?</Link></li>
+                                <li><Link smooth to="/about#about-q4">So who built this?</Link></li>
+                                <li><Link smooth to="/about#about-q5">Where did you get all of this data?</Link></li>
+                                <li><Link smooth to="/about#about-q6">What's the technology stack?</Link></li>
+                                <li><Link smooth to="/about#about-q7">Are there any known bugs?</Link></li>
                             </ul>
                         </div>
                     </div>

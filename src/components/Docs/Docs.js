@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { HashLink as Link } from 'react-router-hash-link'
+
 export default function Docs() {
 
     return (
@@ -10,13 +12,13 @@ export default function Docs() {
                         <div className="tableOfContents">
                             <ul>
                                 <h2>Pokémon</h2>
-                                <li><a href="#path1">GET /pokemon/</a></li>
-                                <li><a href="#path2">{"GET /pokemon/{pokemon_id}"}</a></li>
-                                <li><a href="#path3">{"GET /pokemon/{pokemon_name}"}</a></li>
-                                <li><a href="#path4">{"GET /pokemon/{pokemon_id}/{language}"}</a></li>
-                                <li><a href="#path5">{"GET /pokemon/{pokemon_name}/{language}"}</a></li>
+                                <li><Link smooth to="/docs#path1">GET /pokemon/</Link></li>
+                                <li><Link smooth to="/docs#path2">{"GET /pokemon/{pokemon_id}"}</Link></li>
+                                <li><Link smooth to="/docs#path3">{"GET /pokemon/{pokemon_name}"}</Link></li>
+                                <li><Link smooth to="/docs#path4">{"GET /pokemon/{pokemon_id}/{language}"}</Link></li>
+                                <li><Link smooth to="/docs#path5">{"GET /pokemon/{pokemon_name}/{language}"}</Link></li>
                                 <h2>Other</h2>
-                                <li><a href="#path6">GET /</a></li>
+                                <li><Link smooth to="/docs#path6">GET /</Link></li>
                             </ul>
                         </div>
                     </div>
