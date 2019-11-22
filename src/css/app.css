@@ -492,6 +492,10 @@ pre[class*="language-"] {
   background-color: #222222;
   padding: 3rem;
   margin-bottom: 3rem; }
+  @media (max-width: 599px) {
+    .page-docs .content-docs .path p {
+      text-align: center;
+      padding: 1rem; } }
   .page-docs .content-docs .path .path-get-span {
     background-color: #45db3d;
     border-radius: 6px;
@@ -517,7 +521,7 @@ pre[class*="language-"] {
       padding-right: 40px; }
   @media (max-width: 599px) {
     .page-docs .content-docs .path {
-      padding: 0 0 2rem 0;
+      padding: 2rem 0 2rem 0;
       display: flex;
       flex-direction: column;
       justify-content: center;

@@ -24,7 +24,7 @@ export default function Docs() {
                 <div className="content content-docs">
                     <h1 className="big-header">Pokémon Routes</h1>
 
-                    <div className="path">
+                    <div className="path" id="path1">
                         <h2><span className="path-get-span">GET</span> /pokemon/</h2>
                         <p>Fetch data with all Pokémon or search many Pokémon using a string.</p>
                         <div className="path-parameters">
@@ -40,7 +40,7 @@ export default function Docs() {
                         </div>
                     </div>
                     
-                    <div className="path">
+                    <div className="path" id="path2">
                         <h2><span className="path-get-span">GET</span> {"pokemon/{pokemon_id}"}</h2>
                         <p>Fetch specific Pokémon data by its ID.</p>
                         <div className="path-parameters">
@@ -53,7 +53,7 @@ export default function Docs() {
                         </div>
                     </div>
                     
-                    <div className="path">
+                    <div className="path" id="path3">
                         <h2><span className="path-get-span">GET</span> {"pokemon/{pokemon_name}"}</h2>
                         <p>Fetch specific Pokémon data by its English name.</p>
                         <div className="path-parameters">
@@ -66,7 +66,7 @@ export default function Docs() {
                         </div>
                     </div>
 
-                    <div className="path">
+                    <div className="path" id="path4">
                         <h2><span className="path-get-span">GET</span> {"pokemon/{pokemon_id}/{language}"}</h2>
                         <p>Fetch Pokémon's name in specified language or it's sprite/ID/name.</p>
                         <div className="path-parameters">
@@ -94,7 +94,7 @@ export default function Docs() {
                         </div>
                     </div>
 
-                    <div className="path">
+                    <div className="path" id="path5">
                         <h2><span className="path-get-span">GET</span> {"pokemon/{pokemon_name}/{language}"}</h2>
                         <p>Fetch Pokémon's name in specified language or it's sprite/ID/name.</p>
                         <div className="path-parameters">
@@ -123,7 +123,7 @@ export default function Docs() {
                     </div>
                     <h1 className="big-header">Other Routes</h1>
 
-                    <div className="path">
+                    <div className="path" id="path6">
                         <h2><span className="path-get-span">GET</span> /</h2>
                         <p>Fetch API's version and link to GitHub</p>
                     </div>
