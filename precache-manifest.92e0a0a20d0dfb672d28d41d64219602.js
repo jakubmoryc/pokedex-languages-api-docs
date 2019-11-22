@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "58948b3fc0154e7d7ee8d859ef9aee84",
+    "revision": "8fcf91db97d4e23c0ac35f36f2b2dbfa",
     "url": "/pokedex-languages-api-docs/./index.html"
   },
   {
-    "revision": "3eba4d90beb83d4d593a",
-    "url": "/pokedex-languages-api-docs/./static/css/main.a568b192.chunk.css"
+    "revision": "baa26ac380c8b158e30c",
+    "url": "/pokedex-languages-api-docs/./static/css/main.9f27ac93.chunk.css"
   },
   {
     "revision": "3ac71014d8684b7cad2d",
     "url": "/pokedex-languages-api-docs/./static/js/2.4838f5a4.chunk.js"
   },
   {
-    "revision": "3eba4d90beb83d4d593a",
-    "url": "/pokedex-languages-api-docs/./static/js/main.0edb0f56.chunk.js"
+    "revision": "baa26ac380c8b158e30c",
+    "url": "/pokedex-languages-api-docs/./static/js/main.dddc37a6.chunk.js"
   },
   {
     "revision": "c293aed70f0652e1bf21",
