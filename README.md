@@ -4,7 +4,7 @@ A documentation page for [my API](https://github.com/jakubmoryc/pokedex-language
 
 [See the page.](https://jakubmoryc.github.io/pokedex-languages-api-docs/#/)
 
-## Technology stack & data
+## Technology stack
 
 Built with React.js, React-Router (HashRouter) and SASS.
 
