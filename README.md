@@ -8,6 +8,10 @@ A documentation page for [my API](https://github.com/jakubmoryc/pokedex-language
 
 Built with React.js, React-Router (HashRouter) and SASS.
 
+## Future features
+
+- Add wallpaper background
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
